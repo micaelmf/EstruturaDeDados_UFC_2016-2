@@ -1,3 +1,4 @@
+package _30_08_Partida_Olimpiadas;
 
 public class Principal {
 
