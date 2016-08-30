@@ -45,7 +45,7 @@ public class PartidaHandBall {
 		return placarGeral;
 	}
 	
-	public void setPlacarGeral(String placarGeral) {
+	public void setPlacarGeral() {
 		this.placarGeral = getPlacarTime1() + " X " + getPlacarTime2();
 	}
 	public String getArbitro() {

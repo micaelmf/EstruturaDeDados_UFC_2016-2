@@ -31,6 +31,7 @@ public class Principal {
 		partida.setNumCartoesVermelhosT2(0);
 		partida.setPlacarTime1(28);
 		partida.setPlacarTime2(29);
+		partida.setPlacarGeral();
 		partida.getPlacarGeral();
 	
 		System.out.println(partida);
