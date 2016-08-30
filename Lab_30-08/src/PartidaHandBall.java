@@ -19,7 +19,15 @@ public class PartidaHandBall {
 	private int numSeteMetrosT2;
 	private String placarGeral;
 	
-	
+	public String exibeResultado(){
+		if(this.placarTime1 > this.placarTime2){
+			return "Vitória para " + getT1() + "!";
+		}else if (this.placarTime2 > this.placarTime1){
+			return "Vitória para " + getT2() + "!";
+		}else{
+			return "Empate";
+		}
+	}
 	
 	public int getNumCartoesAmarelosT2() {
 		return numCartoesAmarelosT2;
@@ -34,11 +42,11 @@ public class PartidaHandBall {
 		this.numCartoesVermelhosT1 = numCartoesVermelhosT1;
 	}
 	public String getPlacarGeral() {
-		return getPlacarTime1() + " X " + getPlacarTime2();
+		return placarGeral;
 	}
 	
 	public void setPlacarGeral(String placarGeral) {
-		this.placarGeral = placarGeral;
+		this.placarGeral = getPlacarTime1() + " X " + getPlacarTime2();
 	}
 	public String getArbitro() {
 		return arbitro;
@@ -127,20 +135,21 @@ public class PartidaHandBall {
 	
 	@Override
 	public String toString() { 
-        return "Arbitro: " + getArbitro() + "\n" +
-        		"Nome Time 1: " + getPlacarTime1() + "\n" +
-        		"Nome Time 2: " + getPlacarTime1() + "\n" +
-        		"Jogadores Time 1: " + getJogadoresT1() + "\n" +
-        		"Jogadores Time 2: " + getJogadoresT2() + "\n" +
+        return  "Partida: " + getT1() + " X " + getT2() + "\n" + 
         		"Placar: " + getPlacarGeral() + "\n" +
+        		"Resultado: " + exibeResultado() + "\n" +
         		"Fase: " + getFase() + "\n" +
-        		"Cartoes Amarelos Time 1: " + getNumCartoesAmarelosT1() + "\n" +
-        		"Cartoes Amarelos Time 2: " + getNumCartoesAmarelosT2() + "\n" +
-        		"Cartoes Vermelhos Time 1: " + getNumCartoesVermelhosT1() + "\n" +
-        		"Cartoes Vermelhos Time 2: " + getNumCartoesVermelhosT2() + "\n" +
-        		"2 Minutos Time 1" + getNumDoisMinutosT1() + "\n" +
-        		
-        		;
+        		"Arbitro: " + getArbitro() + "\n" +
+        		"Jogadores - " + getT1() + ": " + getJogadoresT1() + "\n" +
+        		"Jogadores - " + getT2() + getJogadoresT2() + "\n" +
+        		"Cartoes Amarelos - " + getT1() + ": " + getNumCartoesAmarelosT1() + "\n" +
+        		"Cartoes Amarelos - " + getT1() + ": " + getNumCartoesAmarelosT2() + "\n" +
+        		"Cartoes Vermelhos - " + getT1() + ": " + getNumCartoesVermelhosT1() + "\n" +
+        		"Cartoes Vermelhos - " + getT1() + ": " + getNumCartoesVermelhosT2() + "\n" +
+        		"2 Minutos - " + getT1() + ": " + getNumDoisMinutosT1() + "\n" +
+        		"2 Minutos - " + getT2() + ": " + getNumDoisMinutosT2() + "\n" +
+        		"Sete Metos - " + getT1() + ": " + getNumSeteMetrosT1() + "\n" +
+        		"Sete Metos - " + getT2() + ": " + getNumSeteMetrosT2() + "\n";
      } 
 	
 }

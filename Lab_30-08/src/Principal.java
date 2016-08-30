@@ -6,6 +6,8 @@ public class Principal {
 		
 		partida.setArbitro("Sandro Meira Hith");
 		partida.setFase("Fase de Grupos");
+		partida.setT1("Liceu");
+		partida.setT2("Unecim");
 		
 		partida.getJogadoresT1().add("Abner");
 		partida.getJogadoresT1().add("Micael");
