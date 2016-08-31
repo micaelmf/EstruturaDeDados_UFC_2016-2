@@ -9,14 +9,7 @@ public class Produto {
 	private float valorLucro;
 	private String categoria;
 	
-	Produto(int codProduto, String nomeProduto, int saldoEstoque, double precoVenda, double precoCusto, String categoria){
-		this.codProduto = codProduto;
-		this.nomeProduto = nomeProduto;
-		this.saldoEstoque = saldoEstoque ;
-		this.precoVenda = (float) precoVenda;
-		this.precoCusto = (float) precoCusto;
-		this.categoria = categoria;
-	}
+	
 	
 	public void reduzEstoque(int saida){
 		int estoque = getSaldoEstoque() - saida;
@@ -44,7 +37,11 @@ public class Produto {
 		return nomeProduto;
 	}
 	public void setNomeProduto(String nomeProduto) {
-		this.nomeProduto = nomeProduto;
+		if(nomeProduto.length()>50){
+			System.out.println("O nome do produto ultrapassa o limete de 50 caracteres");
+		}else{
+			this.nomeProduto = nomeProduto;			
+		}
 	}
 	public float getPrecoVenda() {
 		return precoVenda;
