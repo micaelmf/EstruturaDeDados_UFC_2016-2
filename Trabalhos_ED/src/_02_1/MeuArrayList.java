@@ -27,13 +27,34 @@ public class MeuArrayList {
 		return null;
 	}
 	
-	public void insere (Object x) throws Exception{
+	public void insere (Object x){
 		if(this.ultimo >= this.item.length){
-			throw new Exception ("Erro: A lista está vazia");
+			ampliaLista();
+			this.item[this.ultimo] = x;
+			this.ultimo = this.ultimo + 1;
 		}else{
 			this.item[this.ultimo] = x;
 			this.ultimo = this.ultimo + 1;
 		}
+	}
+	
+	public void ampliaLista(){
+		//se a lista estiver cheia
+		if (this.ultimo >= this.item.length){
+			//calculando o tamanho da nova lista
+			int novoTamanho = item.length + ((item.length * 50)/100);
+			//criando nova lista com tamanho calculado
+			Object aux[] = new Object[novoTamanho];
+			
+			//Tranferindo itens entre as listas
+			for(int i = 0; i < item.length; i++){
+				aux[i] = item[i];
+			}
+			//Lista item recebe lista aux e lista aux é setada para null
+			item = aux;
+			aux = null;
+		}
+		
 	}
 	
 	public Object retira(Object chave) throws Exception{
@@ -55,6 +76,33 @@ public class MeuArrayList {
 		return item;
 		
 	}
+	
+	public void imprimeLista(){
+		int i = 0; 
+		
+		System.out.print("[");
+		while(i < item.length){
+			System.out.print(item[i]);
+			i++;
+			if(i < item.length){
+				System.out.print(" - ");				
+			}else{
+				System.out.print("]");				
+			}
+		}
+		
+/*		
+ 		for(int i = 0; i < item.length; i++){
+			System.out.print(item[i]);
+			if(i < item.length - 1){
+				System.out.print(" - ");				
+			}else{
+				System.out.print("]");				
+			}
+		}
+*/	
+	}
+	
 	public Object[] getItem() {
 		return item;
 	}
