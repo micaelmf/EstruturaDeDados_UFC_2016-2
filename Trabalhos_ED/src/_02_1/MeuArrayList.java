@@ -28,19 +28,19 @@ public class MeuArrayList {
 	}
 	
 	public void insere (Object x){
-		if(this.ultimo >= this.item.length){
+		if (!listaCheia()){
+			this.item[this.ultimo] = x;
+			this.ultimo = this.ultimo + 1;	
+		}else{
 			ampliaLista();
 			this.item[this.ultimo] = x;
-			this.ultimo = this.ultimo + 1;
-		}else{
-			this.item[this.ultimo] = x;
-			this.ultimo = this.ultimo + 1;
+			this.ultimo = this.ultimo + 1;						
 		}
 	}
 	
 	public void ampliaLista(){
 		//se a lista estiver cheia
-		if (this.ultimo >= this.item.length){
+		if (listaCheia()){
 			//calculando o tamanho da nova lista
 			int novoTamanho = item.length + ((item.length * 50)/100);
 			//criando nova lista com tamanho calculado
@@ -53,8 +53,14 @@ public class MeuArrayList {
 			//Lista item recebe lista aux e lista aux é setada para null
 			item = aux;
 			aux = null;
+		}	
+	}
+	
+	public boolean listaCheia(){
+		if (this.ultimo >= this.item.length){
+			return true;			
 		}
-		
+		return false;
 	}
 	
 	public Object retira(Object chave) throws Exception{
