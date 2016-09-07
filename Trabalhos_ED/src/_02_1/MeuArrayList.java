@@ -43,6 +43,9 @@ public class MeuArrayList {
 		if (listaCheia()){
 			//calculando o tamanho da nova lista
 			int novoTamanho = item.length + ((item.length * 50)/100);
+			if (novoTamanho == 1){
+				novoTamanho = 2;
+			}
 			//criando nova lista com tamanho calculado
 			Object aux[] = new Object[novoTamanho];
 			

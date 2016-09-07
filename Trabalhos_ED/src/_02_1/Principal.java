@@ -4,7 +4,7 @@ public class Principal {
 
 	public static void main(String[] args) throws Exception {
 		
-		MeuArrayList lista = new MeuArrayList(4);
+		MeuArrayList lista = new MeuArrayList(1);
 		
 		Integer a = new Integer(1);
 		Integer b = new Integer(2);
@@ -13,15 +13,12 @@ public class Principal {
 		
 		lista.insere(a);
 		lista.insere(b);
-		lista.insere(c);
-		lista.insere(d);		
-		lista.insere(a);
-		lista.insere(b);
+		/*
 		lista.insere(c);
 		lista.insere(d);
 		lista.insere(a);
-		lista.insere(b);
-		lista.insere(c);
+		*/
+		
 		
 		lista.imprimeLista();
 	}
