@@ -1,4 +1,4 @@
-package _3_1_ListaEncadeada;
+package _3_1_ListaEncadeadaMicael;
 
 public class MinhaListaEncadeada {
 	private Celula primeiro;
@@ -36,8 +36,8 @@ public class MinhaListaEncadeada {
 		}
 		return null;
 	}
-	
-	public int size(){
+	//retorna o tamanho da lista encadeada
+	public int tamanho(){
 		Celula aux = primeiro;
 		int i;
 		for(i = -1; aux != null; i++){
@@ -46,6 +46,7 @@ public class MinhaListaEncadeada {
 		return i;
 	}
 	
+	//retorna o objeto de uma determinada posição
 	public Object get(int index){
 		Celula aux = primeiro;
 		for(int i = -1; aux != null && i < index; i++){
@@ -53,4 +54,10 @@ public class MinhaListaEncadeada {
 		}
 		return aux.getValor();		
 	}
+	
+	//lista vazia
+	//inserir em quqlauqr posição
+	// procurar
+	//exibir
+	//primeira ocoreencia
 }

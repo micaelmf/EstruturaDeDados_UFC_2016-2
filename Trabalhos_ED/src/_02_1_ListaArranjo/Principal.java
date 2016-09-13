@@ -16,9 +16,9 @@ public class Principal {
 		lista.insere(c);
 		lista.insere(d);
 		lista.insere(a);
-		/*
 		lista.insere(b);
 		lista.insere(c);
+		/*
 		lista.insere(d);
 		*/
 		System.out.println("Tamanho: " + lista.getTamanho());

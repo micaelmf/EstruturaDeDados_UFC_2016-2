@@ -15,17 +15,18 @@ public class MinhaListaArranjo {
 	public boolean vazia(){
 		return (this.primeiro == this.ultimo);
 	}
-	//Procura e retorna um item da lista
-	public Object pesquisa (Object chave){
+	//Procura e retorna o indice de um item da lista
+	public int pesquisa (Object chave){
 		if(this.vazia() || chave == null){
-			return null;
+			return -1;
 		}
+		
 		for (int p = 0; p < this.ultimo; p++){
 			if(this.item[p].equals(chave)){
-				return this.item[p];
+				return p;
 			}
 		}
-		return null;
+		return -1;
 	}
 	//Insere um novo item ao final da lista
 	public void insere (Object x){

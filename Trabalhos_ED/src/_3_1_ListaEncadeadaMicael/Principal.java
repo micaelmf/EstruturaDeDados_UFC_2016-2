@@ -1,4 +1,4 @@
-package _3_1_ListaEncadeada;
+package _3_1_ListaEncadeadaMicael;
 
 public class Principal {
 
@@ -10,9 +10,12 @@ public class Principal {
 		lista.insere(10);
 		lista.insere(3);
 
-		System.out.println(lista.get(1));
 		
-		System.out.println(lista.size());
+		lista.remove(1);
+		
+		System.out.println(lista.get(0));
+		
+		System.out.println("Tamanho: " + lista.tamanho());
 	}
 
 }
