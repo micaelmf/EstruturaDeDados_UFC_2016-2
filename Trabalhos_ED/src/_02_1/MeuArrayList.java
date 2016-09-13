@@ -11,11 +11,11 @@ public class MeuArrayList {
 		this.ultimo = this.primeiro;
 		setTamanho(maxTam);
 	}
-
+	//Verifica se a lista está vazia
 	public boolean vazia(){
 		return (this.primeiro == this.ultimo);
 	}
-	
+	//Procura e retorna um item da lista
 	public Object pesquisa (Object chave){
 		if(this.vazia() || chave == null){
 			return null;
@@ -27,7 +27,7 @@ public class MeuArrayList {
 		}
 		return null;
 	}
-	
+	//Insere um novo item ao final da lista
 	public void insere (Object x){
 		if (!listaCheia()){
 			this.item[this.ultimo] = x;
@@ -38,7 +38,7 @@ public class MeuArrayList {
 			this.ultimo = this.ultimo + 1;						
 		}
 	}
-	
+	//Amplia a lista em 50% caso a lista estiver cheia
 	public void ampliaLista(){
 		//se a lista estiver cheia
 		if (listaCheia()){
@@ -60,7 +60,7 @@ public class MeuArrayList {
 			aux = null;
 		}	
 	}
-	
+	//Verifica se a lista está cheia
 	public boolean listaCheia(){
 		if (this.ultimo >= getTamanho()){
 			return true;			
@@ -78,6 +78,7 @@ public class MeuArrayList {
 	}
 	*/
 	
+	//Retira um item da lista
 	public void retira (Object chave) {
 		if(this.vazia() || chave == null){
 			System.out.println("A a lista ou a chave estão vazias");
@@ -145,6 +146,7 @@ public class MeuArrayList {
 	}
 	*/
 	
+	//Exibe a lista na tela
 	public void imprimeLista(){
 		int i = 0; 
 		

@@ -16,31 +16,33 @@ public class Principal {
 		lista.insere(c);
 		lista.insere(d);
 		lista.insere(a);
+		/*
 		lista.insere(b);
 		lista.insere(c);
 		lista.insere(d);
-		/*
-		lista.insere(a);
-		lista.insere(b);
 		*/
 		System.out.println("Tamanho: " + lista.getTamanho());
 		System.out.println("Último: " + lista.getUltimo());
 		lista.imprimeLista();
 		
+		/*
 		lista.retira(a);
 		lista.retira(b);
 		lista.retira(c);
 		lista.retira(d);
 		lista.retira(a);
-		/*
 		lista.retira(b);
 		lista.retira(c);
 		lista.retira(d);
 		*/
+		
+		
 		System.out.println("Tamanho: " + lista.getTamanho());
 		System.out.println("Último: " + lista.getUltimo());
 		lista.imprimeLista();
 
+		System.out.println("Pesquisa");
+		System.out.println(lista.pesquisa(a));
 	}
 
 }
