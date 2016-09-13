@@ -4,7 +4,7 @@ public class Principal {
 
 	public static void main(String[] args) throws Exception {
 		
-		MeuArrayList lista = new MeuArrayList(1);
+		MinhaListaArranjo lista = new MinhaListaArranjo(1);
 		
 		Integer a = new Integer(1);
 		Integer b = new Integer(2);

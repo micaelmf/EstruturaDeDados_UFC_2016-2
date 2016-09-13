@@ -1,11 +1,11 @@
 package _02_1_ListaArranjo;
 
-public class MeuArrayList {
+public class MinhaListaArranjo {
 	private Object item[];
 	private int primeiro = 0, ultimo = 0, posicao = 0, tamanho = 0;
 	
 	//Cria a lista
-	public MeuArrayList(int maxTam){
+	public MinhaListaArranjo(int maxTam){
 		this.item = new Object[maxTam];
 		this.primeiro = 0;
 		this.ultimo = this.primeiro;
