@@ -1,4 +1,4 @@
-package _02_1;
+package _02_1_ListaArranjo;
 
 public class MeuArrayList {
 	private Object item[];
