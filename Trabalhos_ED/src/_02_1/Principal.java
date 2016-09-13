@@ -31,8 +31,8 @@ public class Principal {
 		lista.retira(b);
 		lista.retira(c);
 		lista.retira(d);
-		/*
 		lista.retira(a);
+		/*
 		lista.retira(b);
 		lista.retira(c);
 		lista.retira(d);
@@ -40,8 +40,7 @@ public class Principal {
 		System.out.println("Tamanho: " + lista.getTamanho());
 		System.out.println("Último: " + lista.getUltimo());
 		lista.imprimeLista();
-		
-		lista.imprimeX();
+
 	}
 
 }

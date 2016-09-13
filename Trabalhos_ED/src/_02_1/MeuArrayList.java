@@ -87,7 +87,7 @@ public class MeuArrayList {
 		while(i < this.ultimo && !this.item[i].equals(chave)){
 			i++;
 		}
-		if (i >= this.ultimo){
+		if (i >= ultimo){
 			System.out.println("Chave não encontrada!");
 			imprimeLista();
 		}else{
@@ -98,11 +98,12 @@ public class MeuArrayList {
 			//movendo itens da lista
 			Object prox = item[i+1];
 			
-			while(i < ultimo){
+			while(i < ultimo-1){
 				item[i] = prox;
 				item[i+1] = null;
 				i++;
-				prox = item[i+1];	
+				prox = item[i+1];					
+
 			}
 		}
 	
@@ -160,23 +161,6 @@ public class MeuArrayList {
 		System.out.println("");
 		
 	}
-	
-	public void imprimeX(){
-		int i = 0;
-		System.out.print("[");
-		while(i < item.length){
-			if(item[i] != null){
-				System.out.print("X");
-			}else{
-				System.out.print("| |");
-			}
-			i++;
-			if(i < item.length){
-				System.out.print(" - ");				
-			}else{
-				System.out.print("]");				
-			}
-		}
 		
 /*		
  		for(int i = 0; i < item.length; i++){
@@ -188,9 +172,6 @@ public class MeuArrayList {
 			}
 		}
 */	
-	}
-	
-	
 	
 	public int getTamanho() {
 		return tamanho;
