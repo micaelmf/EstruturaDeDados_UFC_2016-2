@@ -16,6 +16,7 @@ public class MinhaListaArranjo {
 		return (this.primeiro == this.ultimo);
 	}
 	//Procura e retorna o indice de um item da lista
+	//teste
 	public int pesquisa (Object chave){
 		if(this.vazia() || chave == null){
 			return -1;
