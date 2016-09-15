@@ -43,18 +43,23 @@ public class MinhaListaEncadeada <T> {
 	public int tamanho(){
 		Celula aux = primeiro;
 		int i;
-		for(i = -1; aux != null; i++){
+		for(i = 0; aux != null; i++){
 			aux = aux.getProx();
 		}
-		return i;
+		return i-1;
 	}
 	
 	public Object pesquisa(int indice){
 		Celula aux = primeiro;
-		for(int i = -1; aux != null && i < indice; i++){
-			aux = aux.getProx();
+		if(indice > tamanho()){
+			System.out.println("Indice maior que o tamanho da lista");
+		}else{
+			for(int i = -1; aux != null && i < indice; i++){
+				aux = aux.getProx();
+			}
+			return aux.getValor();					
 		}
-		return aux.getValor();		
+		return null;
 	}
 	
 	public void imprime(){
@@ -73,6 +78,13 @@ public class MinhaListaEncadeada <T> {
 			i++;
 		}
 		
+	}
+	
+	public boolean vazia(){
+		if(tamanho() <= 1){
+			return true;
+		}
+		return false;
 	}
 	
 	public Object ultimo(){

@@ -20,8 +20,8 @@ public class Principal {
 		System.out.println("Ultimo: " + lista.ultimo());
 		lista.imprime();
 		
-		System.out.println("Item | " + lista.remove(0) + " | Removido");
 		/*
+		System.out.println("Item | " + lista.remove(5) + " | Removido");
 		System.out.println("Item | " + lista.remove(4) + " | Removido");
 		System.out.println("Item | " + lista.remove(3) + " | Removido");
 		System.out.println("Item | " + lista.remove(2) + " | Removido");
@@ -33,7 +33,8 @@ public class Principal {
 		System.out.println("Ultimo: " + lista.ultimo());
 		lista.imprime();
 		
-		System.out.println("Pesquisa: " + lista.pesquisa(1));		
+		System.out.println("Pesquisa: " + lista.pesquisa(10));
+		System.out.println("A lista está vazia? " + lista.vazia());
 	}
 
 }
