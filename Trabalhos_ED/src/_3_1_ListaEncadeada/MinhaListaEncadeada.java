@@ -1,7 +1,7 @@
 package _3_1_ListaEncadeada;
 
 public class MinhaListaEncadeada <T> {
-	private Celula primeiro;
+	final private Celula primeiro;
 	private Celula ultimo;
 
 	public MinhaListaEncadeada(){
@@ -23,11 +23,13 @@ public class MinhaListaEncadeada <T> {
 		Celula aux = primeiro;
 		int i = -1;
 		
+		
 		while(aux != null && i < indice){
 			if(i+1 == indice){
 				Object item = aux.getProx().getValor();
 				//remove
 				aux.setProx(aux.getProx().getProx());
+				//quando o último for removido
 				if(i+1 == tamanho()){
 					this.ultimo = aux;
 				}
@@ -51,15 +53,14 @@ public class MinhaListaEncadeada <T> {
 	
 	public Object pesquisa(int indice){
 		Celula aux = primeiro;
-		if(indice > tamanho()){
-			System.out.println("Indice maior que o tamanho da lista");
-		}else{
-			for(int i = -1; aux != null && i < indice; i++){
+
+		if((vazia() != true) &&  (indice > tamanho())){
+			for(int i = -1; (aux != null) && (i < indice); i++){
 				aux = aux.getProx();
 			}
 			return aux.getValor();					
 		}
-		return null;
+		return null;		
 	}
 	
 	public void imprime(){
@@ -92,6 +93,9 @@ public class MinhaListaEncadeada <T> {
 	}
 	
 	public Object primeiro(){
+		if(tamanho() == 0){
+			return null;
+		}
 		return getPrimeiro().getProx().getValor();
 	}
 	
@@ -99,10 +103,12 @@ public class MinhaListaEncadeada <T> {
 		return primeiro;
 	}
 	
+	
+/*	
 	public void setPrimeiro(Celula primeiro) {
 		this.primeiro = primeiro;
 	}
-	
+*/
 	public Celula getUltimo() {
 		return ultimo;
 	}
