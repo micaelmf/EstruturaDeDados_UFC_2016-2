@@ -1,3 +1,7 @@
+/*
+ * TRABALHO 02 - Implementar quatro operações de uma LISTA Arranjo
+ */
+
 package _02_1_ListaArranjo;
 
 public class Principal {
