@@ -3,7 +3,7 @@
  * FILA Circular, PILHA com Arranjo e PILHA encadeada e 
  */
 
-package _04_1_Fila_e_Pilha;
+package _04_1_FilaArranjo;
 
 public class Principal {
 
