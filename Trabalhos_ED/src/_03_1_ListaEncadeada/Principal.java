@@ -2,7 +2,7 @@
  * TRABALHO 03 - Implementar quatro operações de uma lista encadeada com cabeça
  */
 
-package _3_1_ListaEncadeada;
+package _03_1_ListaEncadeada;
 
 public class Principal {
 

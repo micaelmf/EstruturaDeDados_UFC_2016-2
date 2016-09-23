@@ -1,4 +1,4 @@
-package _3_1_ListaEncadeada;
+package _03_1_ListaEncadeada;
 
 public class MinhaListaEncadeada <T> {
 	final private Celula primeiro;
