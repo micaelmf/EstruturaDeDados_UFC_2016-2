@@ -29,15 +29,25 @@ public class Principal {
 		System.out.println("Último: " + lista.getUltimo());
 		lista.imprimeLista();
 		
+		System.out.println("------------");
+		lista.remove(a);
+		lista.imprimeLista();
+		lista.remove(b);
+		lista.imprimeLista();
+		lista.remove(c);
+		lista.imprimeLista();
+		lista.remove(d);
+		lista.imprimeLista();
+		lista.remove(a);
+		lista.imprimeLista();
+		lista.remove(b);
+		lista.imprimeLista();
+		System.out.println("------------");
 		/*
-		lista.retira(a);
-		lista.retira(b);
-		lista.retira(c);
-		lista.retira(d);
-		lista.retira(a);
-		lista.retira(b);
-		lista.retira(c);
-		lista.retira(d);
+		lista.remove(c);
+		lista.imprimeLista();
+		lista.remove(d);
+		lista.imprimeLista();
 		*/
 		
 		
@@ -46,7 +56,7 @@ public class Principal {
 		lista.imprimeLista();
 
 		System.out.println("Pesquisa");
-		System.out.println(lista.pesquisa(a));
+		System.out.println(lista.pesquisa(b));
 	}
 
 }

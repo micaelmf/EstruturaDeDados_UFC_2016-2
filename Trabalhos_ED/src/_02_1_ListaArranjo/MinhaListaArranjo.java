@@ -1,12 +1,12 @@
 package _02_1_ListaArranjo;
 
 public class MinhaListaArranjo {
-	private Object item[];
+	private Object itens[];
 	private int primeiro = 0, ultimo = 0, posicao = 0, tamanho = 0;
 	
 	//Cria a lista
 	public MinhaListaArranjo(int maxTam){
-		this.item = new Object[maxTam];
+		this.itens = new Object[maxTam];
 		this.primeiro = 0;
 		this.ultimo = this.primeiro;
 		setTamanho(maxTam);
@@ -22,21 +22,22 @@ public class MinhaListaArranjo {
 			return -1;
 		}
 		
-		for (int p = 0; p < this.ultimo; p++){
-			if(this.item[p].equals(chave)){
-				return p;
+		for (int i = 0; i < this.ultimo-1; i++){
+			if(this.itens[i].equals(chave)){
+				return i;
 			}
 		}
+		
 		return -1;
 	}
 	//Insere um novo item ao final da lista
 	public void insere (Object x){
 		if (!listaCheia()){
-			this.item[this.ultimo] = x;
+			this.itens[this.ultimo] = x;
 			this.ultimo = this.ultimo + 1;	
 		}else{
 			ampliaLista();
-			this.item[this.ultimo] = x;
+			this.itens[this.ultimo] = x;
 			this.ultimo = this.ultimo + 1;						
 		}
 	}
@@ -54,11 +55,11 @@ public class MinhaListaArranjo {
 			Object aux[] = new Object[novoTamanho];
 			
 			//Tranferindo itens entre as listas
-			for(int i = 0; i < item.length; i++){
-				aux[i] = item[i];
+			for(int i = 0; i < itens.length; i++){
+				aux[i] = itens[i];
 			}
 			//Lista item recebe lista aux e lista aux é setada para null
-			item = aux;
+			itens = aux;
 			aux = null;
 		}	
 	}
@@ -80,14 +81,14 @@ public class MinhaListaArranjo {
 	}
 	*/
 	
-	//Retira um item da lista
-	public void retira (Object chave) {
+	//Retira um item determinado da lista
+	public void remove (Object chave) {
 		if(this.vazia() || chave == null){
 			System.out.println("A a lista ou a chave estão vazias");
 		}
 		int i = 0;
 		//procurando a posição do item
-		while(i < this.ultimo && !this.item[i].equals(chave)){
+		while(i < this.ultimo && !this.itens[i].equals(chave)){
 			i++;
 		}
 		if (i >= ultimo){
@@ -95,36 +96,44 @@ public class MinhaListaArranjo {
 			imprimeLista();
 		}else{
 			//apagando o conteudo da posição i
-			item[i] = null;
+			itens[i] = null;	
 			ultimo -= 1;
-						
-			//movendo itens da lista
-			Object prox = item[i+1];
-			
-			while(i < ultimo-1){
-				item[i] = prox;
-				item[i+1] = null;
-				i++;
-				prox = item[i+1];					
-
-			}
-		}
+		
+		
+		}		
+		reposiciona(i);
+	}
 	
+	public void reposiciona(int i){
+		//movendo itens da lista
+		Object prox = itens[i+1];
+		
+		while(i < ultimo){
+			itens[i] = prox;
+			itens[i+1] = null;
+			i++;
+			prox = itens[i+1];					
+		}
+		
+		reduzLista();
+	}
+	
+	public void reduzLista(){
 		int novoTamanho = 0;
 		if(getUltimo() <= (getTamanho()/2)){
-			novoTamanho = ((getTamanho()/2) + ((getUltimo()+25)/100));
+			novoTamanho = ((getTamanho()/2) + ((getUltimo()+25)/100)+1);
 			Object aux[] = new Object[novoTamanho];
 			//Tranferindo itens entre as listas
 			for(int j = 0; j < novoTamanho; j++){
-				aux[j] = item[j];
+				aux[j] = itens[j];
 			}
 			//Lista item recebe lista aux e lista aux é setada para null
-			item = aux;
+			itens = aux;
 			aux = null;
 			setTamanho(novoTamanho);
-		}
-	
+		}		
 	}
+	
 	
 	/*
 	public Object retira(Object chave) throws Exception{
@@ -153,10 +162,10 @@ public class MinhaListaArranjo {
 		int i = 0; 
 		
 		System.out.print("[");
-		while(i < item.length){
-			System.out.print(item[i]);
+		while(i < itens.length){
+			System.out.print(itens[i]);
 			i++;
-			if(i < item.length){
+			if(i < itens.length){
 				System.out.print(" - ");				
 			}else{
 				System.out.print("]");				
@@ -185,11 +194,11 @@ public class MinhaListaArranjo {
 		this.tamanho = tamanho;
 	}
 
-	public Object[] getItem() {
-		return item;
+	public Object[] getItens() {
+		return itens;
 	}
-	public void setItem(Object[] item) {
-		this.item = item;
+	public void setItens(Object[] item) {
+		this.itens = item;
 	}
 	public int getPrimeiro() {
 		return primeiro;
