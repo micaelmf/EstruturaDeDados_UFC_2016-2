@@ -82,7 +82,7 @@ public class MinhaListaArranjo {
 	*/
 	
 	//Retira um item determinado da lista
-	public void remove (Object chave) {
+	public void removePosicao (Object chave) {
 		if(this.vazia() || chave == null){
 			System.out.println("A a lista ou a chave estão vazias");
 		}
@@ -98,13 +98,21 @@ public class MinhaListaArranjo {
 			//apagando o conteudo da posição i
 			itens[i] = null;	
 			ultimo -= 1;
-		
-		
 		}		
-		reposiciona(i);
+		deslocamento(i);
 	}
 	
-	public void reposiciona(int i){
+	//Remove elemento mais a esquerda
+	public Object removePrimeiro(){
+		Object item = this.itens[0];
+		this.itens[0] = null;
+		deslocamento(0);
+		
+		return item;
+	}
+	
+	
+	public void deslocamento(int i){
 		//movendo itens da lista
 		Object prox = itens[i+1];
 		

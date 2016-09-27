@@ -30,17 +30,17 @@ public class Principal {
 		lista.imprimeLista();
 		
 		System.out.println("------------");
-		lista.remove(a);
+		lista.removePosicao(a);
 		lista.imprimeLista();
-		lista.remove(b);
+		lista.removePosicao(b);
 		lista.imprimeLista();
-		lista.remove(c);
+		lista.removePosicao(c);
 		lista.imprimeLista();
-		lista.remove(d);
+		lista.removePosicao(d);
 		lista.imprimeLista();
-		lista.remove(a);
+		lista.removePosicao(a);
 		lista.imprimeLista();
-		lista.remove(b);
+		lista.removePosicao(b);
 		lista.imprimeLista();
 		System.out.println("------------");
 		/*

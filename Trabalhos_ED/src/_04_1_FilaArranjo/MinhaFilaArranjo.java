@@ -3,19 +3,23 @@ import _02_1_ListaArranjo.MinhaListaArranjo;
 
 public class MinhaFilaArranjo {
 	MinhaListaArranjo listaArranjo = new MinhaListaArranjo(10);	//Cria lista de Arranjo do pacote _02_1
-	Object a = listaArranjo;
-	
-	
+	Object[] itens = listaArranjo.getItens();
 	
 	//Adiciona item na fila
 	public void insere(Object item){
-		listaArranjo.insere(item);
-		
+		listaArranjo.insere(item); //insere na última posição (mais a direita)
 	}
 
 	//Remove o primeiro da fila
-	public void remove(){
-		
+	public Object remove(){
+		return listaArranjo.removePrimeiro();
 	}
 	
+	public void pesquisa (Object chave){
+		listaArranjo.pesquisa(chave);
+	}
+	
+	public boolean cheia(){
+		return listaArranjo.listaCheia();
+	}
 }
