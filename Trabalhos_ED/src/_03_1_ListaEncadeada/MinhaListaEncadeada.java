@@ -5,8 +5,8 @@ public class MinhaListaEncadeada {
 	private Celula ultimo;
 
 	public MinhaListaEncadeada(){
-		primeiro = new Celula();
-		ultimo = primeiro;
+		this.primeiro = new Celula();
+		this.ultimo = this.primeiro;
 		
 	}
 	
