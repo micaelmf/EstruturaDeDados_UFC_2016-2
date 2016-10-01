@@ -29,12 +29,11 @@ public class Principal {
 		System.out.println("Último: " + lista.getUltimo());
 		lista.imprimeLista();
 		
-		System.out.println("------------");
-		System.out.println("Removido: " + lista.removePrimeiro());
-		System.out.println("Removido: " + lista.removePrimeiro());
-		System.out.println("------------");
+		System.out.println("-----------------------------------------------------");
+		System.out.println("Removido: " + lista.removeUltimo());
+		System.out.println("Removido: " + lista.removeUltimo());
+		System.out.println("-----------------------------------------------------");
 
-		
 		/*
 		lista.removePosicao(a);
 		lista.imprimeLista();

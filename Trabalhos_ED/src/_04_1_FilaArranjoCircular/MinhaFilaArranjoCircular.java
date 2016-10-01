@@ -12,7 +12,7 @@ public class MinhaFilaArranjoCircular {
 
 	//Remove o primeiro da fila
 	public Object remove(){
-		return listaArranjo.removePrimeiro();
+		return listaArranjo.removeUltimo();
 	}
 	
 	public void pesquisa (Object chave){

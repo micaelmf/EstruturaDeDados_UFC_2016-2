@@ -102,13 +102,17 @@ public class MinhaListaArranjo {
 		deslocamento(i);
 	}
 	
-	//Remove elemento mais a esquerda
-	public Object removePrimeiro(){
-		Object item = this.itens[0];
-		this.itens[0] = null;
-		deslocamento(0);
-		
-		return item;
+	//Remove elemento mais a direta
+	public Object removeUltimo(){
+		if(vazia()){
+			return null;
+		}else{
+			Object item = this.itens[this.ultimo-1]; // -1 pq último retorna a posição e não o indice
+			this.itens[this.ultimo-1] = null;
+			this.ultimo -= 1;
+			reduzLista();
+			return item;			
+		}
 	}
 	
 	
