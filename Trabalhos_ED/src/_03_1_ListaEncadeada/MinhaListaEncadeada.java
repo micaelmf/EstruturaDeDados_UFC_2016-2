@@ -10,7 +10,7 @@ public class MinhaListaEncadeada {
 		
 	}
 	
-	public boolean insere(Object item){
+	public boolean insereFinal(Object item){
 		ultimo.setProx(new Celula());
 		ultimo = ultimo.getProx();
 		ultimo.setValor(item);
@@ -18,6 +18,7 @@ public class MinhaListaEncadeada {
 		
 		return true;
 	}
+	
 	
 	public Object removePosicao(int indice){
 		Celula aux = primeiro;
@@ -41,9 +42,10 @@ public class MinhaListaEncadeada {
 		return null;
 	}
 	
-	public Object removePrimeiro(){
+	public Object removeInicio(){ //Considerando "inicio" sendo o indice 0.
+		Object a = primeiro.getProx().getValor();
 		primeiro.setProx(primeiro.getProx().getProx());
-		return primeiro.getProx();
+		return a; //retorna o elemento removido
 	}
 	
 	public int tamanho(){

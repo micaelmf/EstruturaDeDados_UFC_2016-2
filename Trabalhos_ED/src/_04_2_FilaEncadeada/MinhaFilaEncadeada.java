@@ -5,11 +5,23 @@ public class MinhaFilaEncadeada {
 	MinhaListaEncadeada filaEncadeada = new MinhaListaEncadeada();
 	 
 	public void insere(Object item){
-		filaEncadeada.insere(item);
+		filaEncadeada.insereFinal(item);
 	}
 	
-	public Object removePrimeiro(){
-		return removePrimeiro();
+	public Object removeInicio(){ //condiderando fila iniciando no indice 0
+		return filaEncadeada.removeInicio();
+	}
+	
+	public int tamanho(){
+		return filaEncadeada.tamanho();
+	}
+	
+	public boolean vazia(){
+		return filaEncadeada.vazia();
+	}
+	
+	public void imprime(){
+		filaEncadeada.imprime();
 	}
 	
 }
