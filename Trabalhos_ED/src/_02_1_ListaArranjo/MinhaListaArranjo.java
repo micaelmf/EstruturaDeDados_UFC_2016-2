@@ -96,7 +96,7 @@ public class MinhaListaArranjo {
 			imprimeLista();
 		}else{
 			//apagando o conteudo da posição i
-			itens[i] = null;	
+			itens[i] = null;
 			ultimo -= 1;
 		}		
 		deslocamento(i);

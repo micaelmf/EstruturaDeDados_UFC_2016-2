@@ -30,6 +30,12 @@ public class Principal {
 		lista.imprimeLista();
 		
 		System.out.println("------------");
+		System.out.println("Removido: " + lista.removePrimeiro());
+		System.out.println("Removido: " + lista.removePrimeiro());
+		System.out.println("------------");
+
+		
+		/*
 		lista.removePosicao(a);
 		lista.imprimeLista();
 		lista.removePosicao(b);
@@ -42,8 +48,6 @@ public class Principal {
 		lista.imprimeLista();
 		lista.removePosicao(b);
 		lista.imprimeLista();
-		System.out.println("------------");
-		/*
 		lista.remove(c);
 		lista.imprimeLista();
 		lista.remove(d);

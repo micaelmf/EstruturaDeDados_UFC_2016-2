@@ -1,6 +1,6 @@
 package _03_1_ListaEncadeada;
 
-public class MinhaListaEncadeada <T> {
+public class MinhaListaEncadeada {
 	final private Celula primeiro;
 	private Celula ultimo;
 
@@ -10,19 +10,18 @@ public class MinhaListaEncadeada <T> {
 		
 	}
 	
-	public boolean insere(T item){
+	public boolean insere(Object item){
 		ultimo.setProx(new Celula());
 		ultimo = ultimo.getProx();
 		ultimo.setValor(item);
-		ultimo.setProx(null); //essaa linha pode ser descartada em java
+		//ultimo.setProx(null); //essaa linha pode ser descartada em java
 		
 		return true;
 	}
 	
-	public Object remove(int indice){
+	public Object removePosicao(int indice){
 		Celula aux = primeiro;
 		int i = -1;
-		
 		
 		while(aux != null && i < indice){
 			if(i+1 == indice){
@@ -40,6 +39,11 @@ public class MinhaListaEncadeada <T> {
 			}
 		}
 		return null;
+	}
+	
+	public Object removePrimeiro(){
+		primeiro.setProx(primeiro.getProx().getProx());
+		return primeiro.getProx();
 	}
 	
 	public int tamanho(){

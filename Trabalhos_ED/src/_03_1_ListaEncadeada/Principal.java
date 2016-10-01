@@ -8,7 +8,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MinhaListaEncadeada<Integer> lista = new MinhaListaEncadeada<Integer>();
+		MinhaListaEncadeada lista = new MinhaListaEncadeada();
 		//lista.criaLista();
 		lista.insere(1);
 		lista.insere(2);
@@ -24,13 +24,13 @@ public class Principal {
 		System.out.println("Ultimo: " + lista.ultimo());
 		lista.imprime();
 		
+		/*
 		System.out.println("Item | " + lista.remove(5) + " | Removido");
 		System.out.println("Item | " + lista.remove(4) + " | Removido");
 		System.out.println("Item | " + lista.remove(3) + " | Removido");
 		System.out.println("Item | " + lista.remove(2) + " | Removido");
 		System.out.println("Item | " + lista.remove(1) + " | Removido");
 		System.out.println("Item | " + lista.remove(0) + " | Removido");
-		/*
 		 */
 		System.out.println("Tamanho: " + lista.tamanho());
 		System.out.println("Primeiro: " + lista.primeiro());
