@@ -5,29 +5,45 @@ import javax.swing.plaf.synth.SynthSeparatorUI;
 public class Principal {
 
 	public static void main(String[] args) {
-		MinhaFilaArranjoCircular fila = new MinhaFilaArranjoCircular();
+		MinhaFilaArranjoCircular circular = new MinhaFilaArranjoCircular(2);
 		
 		Integer a = new Integer(1);
 		Integer b = new Integer(2);
 		Integer c = new Integer(3);
 		Integer d = new Integer(4);
 		
-		fila.insere(a);
-		fila.insere(b);
-		fila.insere(c);
-		fila.insere(d);
-		fila.insere(a);
-		fila.insere(b);
-		fila.insere(c);
-		fila.insere(d);
+		circular.insere(a);
+		circular.imprime();
+		circular.insere(b);
+		circular.imprime();
+		circular.insere(c);
+		circular.imprime();
+		circular.insere(d);
+		circular.imprime();
+		circular.insere(a);
+		circular.imprime();
+		circular.insere(b);
+		circular.imprime();
+		circular.insere(c);
+		circular.imprime();
+		circular.insere(d);
+		circular.imprime();
+		circular.insere(a);
+		circular.imprime();
+		circular.remove();
+		circular.imprime();
 		/*
+		circular.insere(b);
+		circular.insere(c);
+		circular.insere(d);
+		circular.insere(c);
+		circular.insere(d);
 		*/
-		Object removido = fila.remove();
-		System.out.println("Removido: " + removido);
+		circular.imprime();
 		/*
+		System.out.println("Removido: " + circular.remove());
 		*/
-		
-		fila.imprime();
+		circular.imprime();
 
 	}
 
