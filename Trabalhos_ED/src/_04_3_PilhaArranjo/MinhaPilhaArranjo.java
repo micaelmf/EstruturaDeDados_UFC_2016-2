@@ -26,4 +26,12 @@ public class MinhaPilhaArranjo {
 	public void imprime(){
 		a.imprimeLista();
 	}
+	
+	public void pesquisa(Object chave){
+		a.pesquisa(chave);
+	}
+	
+	public void pesquisaIndice(int indice){
+		a.pesquisaIndice(indice);
+	}
 }
