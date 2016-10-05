@@ -21,15 +21,27 @@ public class MinhaListaArranjo {
 		if(this.vazia() || chave == null){
 			return -1;
 		}
-		
 		for (int i = 0; i < this.ultimo-1; i++){
 			if(this.itens[i].equals(chave)){
 				return i;
 			}
-		}
-		
+		}	
 		return -1;
 	}
+	
+	//retorna o objeto do indice informado
+	public Object pesquisaIndice (int indice){
+		if(this.vazia() || indice < 0){
+			return null;
+		}
+		for (int i = 0; i < this.ultimo-1; i++){
+			if(indice == i){
+				return itens[i];
+			}
+		}	
+		return null;
+	}
+	
 	//Insere um novo item ao final da lista
 	public void insere (Object x){
 		if (!listaCheia()){
@@ -186,6 +198,8 @@ public class MinhaListaArranjo {
 		System.out.println("");
 		
 	}
+	
+	
 		
 /*		
  		for(int i = 0; i < item.length; i++){
