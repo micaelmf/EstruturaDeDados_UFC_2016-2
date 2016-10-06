@@ -3,15 +3,15 @@ package _04_4_PilhaEncadeada;
 import _03_1_ListaEncadeada.*;
 
 public class MinhaPilhaEncadeada {
-	MinhaListaEncadeada a = new MinhaListaEncadeada();
+	private MinhaListaEncadeada listaEncadeada = new MinhaListaEncadeada();
 	private int tamanho = 0; 
 	
 	
-	public void inseri(Object item){ //insere um elemento no topo (Considere topo o indice 0)		
+	public void insere(Object item){ //insere um elemento no topo (Considere topo o indice 0)		
 		Celula aux = new Celula(); //cria uma nova celula (aux)
 		aux.setValor(item); //atribui valor em aux
-		aux.setProx(a.getPrimeiro().getProx()); //Define que aux aponta para o topo
-		a.getPrimeiro().setProx(aux);
+		aux.setProx(listaEncadeada.getPrimeiro().getProx()); //Define que aux aponta para o topo
+		listaEncadeada.getPrimeiro().setProx(aux);
 		tamanho++;
 	}
 	
@@ -20,9 +20,9 @@ public class MinhaPilhaEncadeada {
 			return null;
 		}else{
 			//pegando o valor do topo atual (celula após a cabeça)
-			Object aux = a.getPrimeiro().getProx().getValor(); 
+			Object aux = listaEncadeada.getPrimeiro().getProx().getValor(); 
 			//aponta a cabeça para a segunda celula. Transformando a segunda célula em topo
-			a.getPrimeiro().setProx(a.getPrimeiro().getProx().getProx());
+			listaEncadeada.getPrimeiro().setProx(listaEncadeada.getPrimeiro().getProx().getProx());
 			tamanho--;
 			return aux;			
 		}
@@ -43,7 +43,21 @@ public class MinhaPilhaEncadeada {
 		if(vazia()){
 			System.out.println("[---| LISTA VAZIA! |---]");
 		}else{
-			a.imprime();			
+			listaEncadeada.imprime();			
 		}
 	}
+
+	public MinhaListaEncadeada getListaEncadeada() {
+		return listaEncadeada;
+	}
+
+	public void setListaEncadeada(MinhaListaEncadeada a) {
+		this.listaEncadeada = a;
+	}
+
+	public void setTamanho(int tamanho) {
+		this.tamanho = tamanho;
+	}
+	
+	
 }

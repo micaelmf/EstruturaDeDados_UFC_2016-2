@@ -3,7 +3,11 @@ package _06_02_Calculadora;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Exercicio_02 calc = new Exercicio_02();
+		
+		
+		
+		calc.calculadora("(2+3)*5((30/2)+5)");
 
 	}
 

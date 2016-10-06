@@ -10,10 +10,10 @@ public class Principal {
 		Integer c = new Integer(3);
 		Integer d = new Integer(4);
 		
-		pilha.inseri(a);
-		pilha.inseri(b);
-		pilha.inseri(c);
-		pilha.inseri(d);
+		pilha.insere(a);
+		pilha.insere(b);
+		pilha.insere(c);
+		pilha.insere(d);
 		/*
 		 */
 		System.out.println("Tamanho: " + pilha.getTamanho());
