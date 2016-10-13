@@ -8,7 +8,7 @@ public class Exercicio_02 {
 	String[] aux;
 	private MinhaPilhaEncadeada pilhaEncadeada = new MinhaPilhaEncadeada();
 	
-	public void calculadora(String calculo){
+	public void inverteCalculo(String calculo){
 		//Enfileira
 		for(int i = 0; i < calculo.length(); i++){
 			pilhaEncadeada.insere(calculo.charAt(i));
@@ -23,6 +23,7 @@ public class Exercicio_02 {
 		}
 		pilhaEncadeada = b;
 		
+		calculadora(pilhaEncadeada);
 		pilhaEncadeada.imprime();
 		
 		/*			
@@ -36,5 +37,19 @@ public class Exercicio_02 {
 			aux = aux.getProx();
 		}
 		*/		
+	}
+	
+	public void calculadora(MinhaPilhaEncadeada pilhaEncadeada){
+		Celula aux = pilhaEncadeada.getPrimeiro();
+	
+		System.out.println(aux.getProx().getValor());
+		
+		for(int i = 0; aux.getProx() != null; i++){
+			//int x = (int) aux.getProx().getValor();
+			if(aux.getProx().getValor().equals('(')){
+				
+			}else if(aux.getProx().getValor())
+		}
+		
 	}
 }

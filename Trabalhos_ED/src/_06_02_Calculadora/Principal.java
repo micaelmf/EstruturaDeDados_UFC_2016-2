@@ -7,7 +7,7 @@ public class Principal {
 		
 		
 		
-		calc.calculadora("(2+3)*((30/2)+5)");
+		calc.inverteCalculo("(2+3)*((30/2)+5)");
 
 	}
 

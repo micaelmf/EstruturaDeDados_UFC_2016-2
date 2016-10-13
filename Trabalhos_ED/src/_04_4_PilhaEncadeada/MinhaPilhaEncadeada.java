@@ -39,6 +39,10 @@ public class MinhaPilhaEncadeada {
 		return false;
 	}
 	
+	public Celula getPrimeiro(){
+		return listaEncadeada.getPrimeiro();
+	}
+	
 	public void imprime(){
 		if(vazia()){
 			System.out.println("[---| LISTA VAZIA! |---]");
