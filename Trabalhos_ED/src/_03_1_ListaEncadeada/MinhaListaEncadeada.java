@@ -73,14 +73,16 @@ public class MinhaListaEncadeada {
 		Celula aux = primeiro;
 		
 		int i = 0, t = tamanho();
-		System.out.print("[");
+		//System.out.print("[");
 		while(i < t){
 			System.out.print(aux.getProx().getValor());
 			aux = aux.getProx();
 			if(aux.getProx() == null){
-				System.out.println("]\n");
+				//System.out.println("]\n");
+				System.out.println("\n");
 			}else{
-				System.out.print(" - ");
+				//System.out.print(" - ");
+				System.out.print("");
 			}
 			i++;
 		}
