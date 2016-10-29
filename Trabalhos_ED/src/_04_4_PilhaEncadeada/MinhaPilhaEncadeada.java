@@ -43,6 +43,10 @@ public class MinhaPilhaEncadeada {
 		return listaEncadeada.getPrimeiro();
 	}
 	
+	public Celula CelulaPrimeiro(){
+		return listaEncadeada.getPrimeiro().getProx();
+	}
+	
 	public void imprime(){
 		if(vazia()){
 			System.out.println("[---| LISTA VAZIA! |---]");

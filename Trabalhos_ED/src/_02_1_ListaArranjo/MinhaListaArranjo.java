@@ -119,7 +119,7 @@ public class MinhaListaArranjo {
 		if(vazia()){
 			return null;
 		}else{
-			Object item = this.itens[this.ultimo-1]; // -1 pq último retorna a posição e não o indice
+			Object item = this.itens[this.ultimo-1]; 
 			this.itens[this.ultimo-1] = null;
 			this.ultimo -= 1;
 			reduzLista();

@@ -20,24 +20,30 @@ public class Principal {
 		circular.imprime();
 		circular.insere(d);
 		circular.imprime();
+		circular.remove();
+		circular.imprime();
+		circular.remove();
+		circular.imprime();
 		circular.insere(a);
 		circular.imprime();
-		circular.insere(b);
-		circular.imprime();
-		circular.insere(c);
-		circular.imprime();
-		circular.insere(d);
+		circular.insere(a);
 		circular.imprime();
 		circular.insere(a);
 		circular.imprime();
 		circular.remove();
 		circular.imprime();
-		/*
 		circular.insere(b);
+		circular.imprime();
 		circular.insere(c);
+		circular.imprime();
 		circular.insere(d);
+		circular.imprime();
 		circular.insere(c);
+		circular.imprime();
 		circular.insere(d);
+		circular.imprime();
+		circular.insere(d);
+		/*
 		*/
 		circular.imprime();
 		/*

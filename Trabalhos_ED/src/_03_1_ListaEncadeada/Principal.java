@@ -10,13 +10,13 @@ public class Principal {
 		// TODO Auto-generated method stub
 		MinhaListaEncadeada lista = new MinhaListaEncadeada();
 		//lista.criaLista();
+		/*
 		lista.insereFinal(1);
 		lista.insereFinal(2);
 		lista.insereFinal(3);
 		lista.insereFinal(4);
 		lista.insereFinal(5);
 		lista.insereFinal(6);
-		/*
 
 		 */
 		System.out.println("Tamanho: " + lista.tamanho());
