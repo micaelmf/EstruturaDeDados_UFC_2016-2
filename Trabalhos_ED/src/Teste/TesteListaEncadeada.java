@@ -12,10 +12,10 @@ public class TesteListaEncadeada {
 		// TODO Auto-generated method stub
 		ListaEncadeada lista = new ListaEncadeada();
 		//lista.criaLista();
-		/*
 		lista.insereFinal(1);
 		lista.insereFinal(2);
 		lista.insereFinal(3);
+		/*
 		lista.insereFinal(4);
 		lista.insereFinal(5);
 		lista.insereFinal(6);
@@ -28,11 +28,11 @@ public class TesteListaEncadeada {
 		
 		System.out.println("Item | " + lista.removePosicao(5) + " | Removido");
 		System.out.println("Item | " + lista.removePosicao(4) + " | Removido");
+		/*
 		System.out.println("Item | " + lista.removePosicao(3) + " | Removido");
 		System.out.println("Item | " + lista.removePosicao(2) + " | Removido");
 		System.out.println("Item | " + lista.removePosicao(1) + " | Removido");
 		System.out.println("Item | " + lista.removePosicao(0) + " | Removido");
-		/*
 		 */
 		System.out.println("Tamanho: " + lista.tamanho());
 		System.out.println("Primeiro: " + lista.primeiro());

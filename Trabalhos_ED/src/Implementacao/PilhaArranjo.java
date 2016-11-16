@@ -1,5 +1,5 @@
 package Implementacao;
-import _02_1_ListaArranjo.*;
+//import _02_1_ListaArranjo.*;
 
 public class PilhaArranjo {
 	ListaArranjo a = new ListaArranjo(5);

@@ -1,6 +1,6 @@
 package Implementacao;
 
-import _03_1_ListaEncadeada.*;
+//import _03_1_ListaEncadeada.*;
 
 public class PilhaEncadeada {
 	private ListaEncadeada listaEncadeada = new ListaEncadeada();

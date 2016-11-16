@@ -6,7 +6,7 @@
 
 package Implementacao;
 
-import _04_3_PilhaArranjo.*;
+//import _04_3_PilhaArranjo.*;
 
 public class InverteString {
 	String[] aux;
