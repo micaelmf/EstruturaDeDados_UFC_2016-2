@@ -1,4 +1,4 @@
-package _01_1_TAD;
+package Implementacao;
 
 public class Produto {
 	private int codProduto;
@@ -10,7 +10,6 @@ public class Produto {
 	private String categoria;
 	
 	
-	
 	public void reduzEstoque(int saida){
 		int estoque = getSaldoEstoque() - saida;
 	
@@ -20,7 +19,6 @@ public class Produto {
 			System.out.println("Saldo insuficiente");
 		}
 	}
-	
 	public int getSaldoEstoque() {
 		return saldoEstoque;
 	}
@@ -55,21 +53,16 @@ public class Produto {
 	public void setPrecoCusto(float precoCusto) {
 		this.precoCusto = precoCusto;
 	}
-	
 	public float getValorLucro() {
 		return valorLucro;
 	}
 	public void setValorLucro() {
 		this.valorLucro = getPrecoVenda() - getPrecoCusto(); 
 	}
-	
 	public String getCategoria() {
 		return categoria;
 	}
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	
-	
-	
 }

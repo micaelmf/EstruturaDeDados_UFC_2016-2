@@ -1,8 +1,8 @@
-package _04_2_FilaEncadeada;
-import _03_1_ListaEncadeada.*;
+package Implementacao;
+//import _03_1_ListaEncadeada.*;
 
-public class MinhaFilaEncadeada {
-	MinhaListaEncadeada filaEncadeada = new MinhaListaEncadeada();
+public class FilaEncadeada {
+	ListaEncadeada filaEncadeada = new ListaEncadeada();
 	 
 	public void insere(Object item){
 		filaEncadeada.insereFinal(item);

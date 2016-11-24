@@ -2,13 +2,15 @@
  * TRABALHO 02 - Implementar quatro operações de uma LISTA Arranjo
  */
 
-package _02_1_ListaArranjo;
+package Teste;
 
-public class Principal {
+import Implementacao.ListaArranjo;
+
+public class TesteListaArranjo {
 
 	public static void main(String[] args) throws Exception {
 		
-		MinhaListaArranjo lista = new MinhaListaArranjo(1);
+		ListaArranjo lista = new ListaArranjo(1);
 		
 		Integer a = new Integer(1);
 		Integer b = new Integer(2);

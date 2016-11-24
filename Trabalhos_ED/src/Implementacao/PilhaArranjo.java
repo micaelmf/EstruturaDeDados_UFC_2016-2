@@ -1,8 +1,8 @@
-package _04_3_PilhaArranjo;
-import _02_1_ListaArranjo.*;
+package Implementacao;
+//import _02_1_ListaArranjo.*;
 
-public class MinhaPilhaArranjo {
-	MinhaListaArranjo a = new MinhaListaArranjo(5);
+public class PilhaArranjo {
+	ListaArranjo a = new ListaArranjo(5);
 	
 	//Insere na última posição (mais a direita)
 	public void inseri(Object item){

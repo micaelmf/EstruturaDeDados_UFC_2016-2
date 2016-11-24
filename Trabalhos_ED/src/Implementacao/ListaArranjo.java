@@ -1,11 +1,11 @@
-package _02_1_ListaArranjo;
+package Implementacao;
 
-public class MinhaListaArranjo {
+public class ListaArranjo {
 	private Object itens[];
 	private int primeiro = 0, ultimo = 0, posicao = 0, tamanho = 0;
 	
 	//Cria a lista
-	public MinhaListaArranjo(int maxTam){
+	public ListaArranjo(int maxTam){
 		this.itens = new Object[maxTam];
 		this.primeiro = 0;
 		this.ultimo = this.primeiro;
@@ -119,7 +119,7 @@ public class MinhaListaArranjo {
 		if(vazia()){
 			return null;
 		}else{
-			Object item = this.itens[this.ultimo-1]; // -1 pq último retorna a posição e não o indice
+			Object item = this.itens[this.ultimo-1]; 
 			this.itens[this.ultimo-1] = null;
 			this.ultimo -= 1;
 			reduzLista();

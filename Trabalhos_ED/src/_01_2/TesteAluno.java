@@ -20,7 +20,7 @@ package _01_2;
 
 import java.util.ArrayList;
 
-public class Principal {
+public class TesteAluno {
 	private static ArrayList<Aluno> alunos = new ArrayList<>();
 	
 	public static void main(String[] args) {

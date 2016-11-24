@@ -1,6 +1,8 @@
-package _01_1_TAD;
+package Teste;
 
-public class Principal {
+import Implementacao.Produto;
+
+public class TesteProduto {
 
 	public static void main(String[] args) {
 		Produto p1 = new Produto();

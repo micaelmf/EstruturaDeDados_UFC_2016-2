@@ -1,12 +1,14 @@
-package _04_3_PilhaArranjo;
+package Teste;
+
+import Implementacao.PilhaArranjo;
 
 /*
  * TRABALHO 02 - Implementar quatro operações de uma LISTA Arranjo
  */
-public class Principal {
+public class TestePilhaArranjo {
 
 	public static void main(String[] args) {
-		MinhaPilhaArranjo pilha = new MinhaPilhaArranjo();
+		PilhaArranjo pilha = new PilhaArranjo();
 		
 		Integer a = new Integer(11);
 		Integer b = new Integer(12);

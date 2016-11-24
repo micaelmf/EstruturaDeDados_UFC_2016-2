@@ -1,17 +1,17 @@
-package _03_1_ListaEncadeada;
+package Implementacao;
 
-public class MinhaListaEncadeada {
-	final private Celula primeiro;
-	private Celula ultimo;
+public class ListaEncadeada {
+	final private CelulaListaEncadeada primeiro;
+	private CelulaListaEncadeada ultimo;
 
-	public MinhaListaEncadeada(){
-		this.primeiro = new Celula();
+	public ListaEncadeada(){
+		this.primeiro = new CelulaListaEncadeada();
 		this.ultimo = this.primeiro;
 		
 	}
 	
 	public boolean insereFinal(Object item){
-		ultimo.setProx(new Celula());
+		ultimo.setProx(new CelulaListaEncadeada());
 		ultimo = ultimo.getProx();
 		ultimo.setValor(item);
 		//ultimo.setProx(null); //essaa linha pode ser descartada em java
@@ -21,7 +21,7 @@ public class MinhaListaEncadeada {
 	
 	
 	public Object removePosicao(int indice){
-		Celula aux = primeiro;
+		CelulaListaEncadeada aux = primeiro;
 		int i = -1;
 		
 		while(aux != null && i < indice){
@@ -49,7 +49,7 @@ public class MinhaListaEncadeada {
 	}
 	
 	public int tamanho(){
-		Celula aux = primeiro;
+		CelulaListaEncadeada aux = primeiro;
 		int i;
 		for(i = 0; aux != null; i++){
 			aux = aux.getProx();
@@ -58,7 +58,7 @@ public class MinhaListaEncadeada {
 	}
 	
 	public Object pesquisa(int indice){
-		Celula aux = primeiro;
+		CelulaListaEncadeada aux = primeiro;
 
 		if((vazia() != true) &&  (indice > tamanho())){
 			for(int i = -1; (aux != null) && (i < indice); i++){
@@ -70,17 +70,19 @@ public class MinhaListaEncadeada {
 	}
 	
 	public void imprime(){
-		Celula aux = primeiro;
+		CelulaListaEncadeada aux = primeiro;
 		
 		int i = 0, t = tamanho();
-		System.out.print("[");
+		//System.out.print("[");
 		while(i < t){
 			System.out.print(aux.getProx().getValor());
 			aux = aux.getProx();
 			if(aux.getProx() == null){
-				System.out.println("]\n");
+				//System.out.println("]\n");
+				System.out.println("\n");
 			}else{
-				System.out.print(" - ");
+				//System.out.print(" - ");
+				System.out.print("");
 			}
 			i++;
 		}
@@ -105,7 +107,8 @@ public class MinhaListaEncadeada {
 		return getPrimeiro().getProx().getValor();
 	}
 	
-	public Celula getPrimeiro() {
+	
+	public CelulaListaEncadeada getPrimeiro() {
 		return primeiro;
 	}
 	
@@ -115,11 +118,11 @@ public class MinhaListaEncadeada {
 		this.primeiro = primeiro;
 	}
 */
-	public Celula getUltimo() {
+	public CelulaListaEncadeada getUltimo() {
 		return ultimo;
 	}
 	
-	public void setUltimo(Celula ultimo) {
+	public void setUltimo(CelulaListaEncadeada ultimo) {
 		this.ultimo = ultimo;
 	}
 }

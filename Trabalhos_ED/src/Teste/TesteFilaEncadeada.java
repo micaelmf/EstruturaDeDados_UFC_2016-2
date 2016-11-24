@@ -1,9 +1,11 @@
-package _04_2_FilaEncadeada;
+package Teste;
 
-public class Principal {
+import Implementacao.FilaEncadeada;
+
+public class TesteFilaEncadeada {
 
 	public static void main(String[] args) {
-		MinhaFilaEncadeada fila = new MinhaFilaEncadeada();
+		FilaEncadeada fila = new FilaEncadeada();
 		
 		Integer a = new Integer(1);
 		Integer b = new Integer(2);
