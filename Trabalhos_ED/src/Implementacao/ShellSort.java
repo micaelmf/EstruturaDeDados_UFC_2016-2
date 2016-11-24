@@ -23,15 +23,16 @@ public class ShellSort {
 	            j = i;
 	                
 	            while (j >= tPasso && itens[j - tPasso] > elemento2) {
-	                itens[j] = itens[j - tPasso];
-	                j = j - tPasso;
+	                itens[j] = itens[j - tPasso]; //se o elemento1 for maior que o elemento2 acontece a troca 
+	                j = j - tPasso; // volta fazendo mais comparações
 	            }
-	            itens[j] = elemento2;
+	            itens[j] = elemento2; // quando o elemento2 for maior que o elemento1  
 	        }
+	        System.out.println("passo");
 	        tPasso = tPasso / 2;
 	    }
 	}
-
+	
 	public void imprimeVetor(int vetor[]){
 		for(int i=0; i < vetor.length; i++){
 			System.out.printf(" " + vetor[i]);
