@@ -28,7 +28,6 @@ public class ShellSort {
 	            }
 	            itens[j] = elemento2; // quando o elemento2 for maior que o elemento1  
 	        }
-	        System.out.println("passo");
 	        tPasso = tPasso / 2;
 	    }
 	}
