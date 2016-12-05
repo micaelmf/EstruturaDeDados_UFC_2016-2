@@ -10,7 +10,7 @@ public class SelectionSort {
 			menor = vetor[i];
 			
 			for(int j = i+1; j < vetor.length; j++){
-				valor = vetor[j];
+				//valor = vetor[j];
 				if(vetor[j] < menor ){
 					menor = vetor[j];
 					indiceMenor = j;
