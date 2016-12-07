@@ -17,7 +17,6 @@ public class InsertionSort {
 			vetor[j+1] = atual;
 		}
 		
-		imprimeVetor(vetor);
 		return vetor;
 	}
 	

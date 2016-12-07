@@ -20,7 +20,6 @@ public class SelectionSort {
 			vetor[indiceMenor] = vetor[i];
 			vetor[i] = menor;
 		}
-		imprimeVetor(vetor);
 		
 	}
 	

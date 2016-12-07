@@ -8,7 +8,10 @@ public class TesteSelectionSort {
 		
 		int[] vetor = {9,7,6,5,2,1,3,4,8};
 		
+		selection.imprimeVetor(vetor);
+		System.out.println("");
 		selection.selectionSort(vetor);
+		selection.imprimeVetor(vetor);
 
 	}
 
