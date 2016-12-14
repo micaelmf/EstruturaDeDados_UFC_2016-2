@@ -10,26 +10,31 @@ public class ArvoreBST {
 	}
 
 	private NoBST NoBST(int chave, int valor){
-		NoBST x = new NoBST(chave,valor);
-		return x;
+		NoBST xNovo = new NoBST(chave,valor);
+		return xNovo;
 	}
 	
 	private NoBST insere(NoBST x, int chave, int valor){
 		if(x == null){
 			return NoBST(chave,valor);
 		}else if(chave < x.chave){
-			insere(x.esq, chave, valor);
+			x.esq = insere(x.esq, chave, valor);
 		}else if(chave > x.chave){
-			insere(x.dir, chave, valor);
+			x.dir = insere(x.dir, chave, valor);
 		}
 		return x;
 	}
 	
 	public void insere(int chave, int valor){
-		insere(this.raiz,chave,valor);
+		insere(raiz,chave,valor);
 	}
 
 	private NoBST removeMin(NoBST x){
+		/*essa condição foi necessário pois se x for igual a null não é possível
+		 * acessar o seus atributos direita e esquerda */
+		if(x == null){
+			return x;
+		}
 		if(x.esq == null){
 			return x.dir;
 		}
@@ -37,35 +42,64 @@ public class ArvoreBST {
 		return x;
 	}
 	
-	private NoBST delete(NoBST x, int chave){
+	public NoBST remove(int chave){
+		return remove(raiz, chave);
+	}
+	
+	private NoBST remove(NoBST x, int chave){
+		
 		if(x == null){
 			return null;
 		}
 		if(chave < x.chave){
-			x.esq = delete(x.esq, chave);
+			x.esq = remove(x.esq, chave);
 		}
 		if(chave > x.chave){
-			x.dir = delete(x.dir,chave);
+			x.dir = remove(x.dir,chave);
 		}else{
 			NoBST t = x;
-			x = removeMin(t.dir);
-			x.esq = t.esq;
+			x = min(t.dir);
+			
+			/*essa condição foi necessário pois se x for igual a null não é possível
+			 * acessar o seus atributos direita e esquerda */ 
+			if(removeMin(t.dir) != null){
+				x.dir = removeMin(t.dir);
+				x.esq = t.esq;
+			}
+			
 		}
 		return x;
 	}
 	
 	public int buscaBST(int chave){
-		NoBST x = this.raiz;
-		while(x != null){
-			if(x.chave == chave){
-				return x.valor;
-			}else if(chave < x.chave){
-				x = x.esq;
-			}else if(chave > x.chave){
-				x = x.dir;
+		NoBST xBusca = this.raiz;
+		while(xBusca != null){
+			if(xBusca.chave == chave){
+				return xBusca.valor;
+			}else if(chave < xBusca.chave){
+				xBusca = xBusca.esq;
+			}else if(chave > xBusca.chave){
+				xBusca = xBusca.dir;
 			}
 		}
 		return -1;
+	}
+	
+	private NoBST min(NoBST x){
+		/*essa condição foi necessário pois se x for igual a null não é possível
+		 * acessar o seus atributos direita e esquerda */
+		if(x == null){
+			return x;
+		}
+		if(x.esq == null){
+			return x;
+		}else{
+			return min(x.esq);
+		}
+	}
+	
+	public int min(){
+		return min(raiz).valor;
 	}
 	
 	public NoBST getRaiz() {
